@@ -68,6 +68,53 @@
       document.getElementById("year").textContent = String(
         new Date().getFullYear(),
       );
+
+      const statusEl = document.getElementById("statusLine");
+      const prefersReducedMotion =
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const statusLines = [
+        "Status: Refactoring the Competition",
+        "0% Progress... (Just Kidding, it's 99%)",
+        "Shipping soon™ (lawyer-approved).",
+        "Refactor in public. Cry in private.",
+        "Currently removing 12 lines to add 48.",
+        "Yes, it's broken. No, it's not a bug. It's a feature.",
+        "Upgrading pixels. Downgrading excuses.",
+        "If you can read this, I'm still awake.",
+        "Reducing latency and patience simultaneously.",
+        "Deploying confidence. Rolling back doubts.",
+        "Polishing the UI until it reflects my ego.",
+        "Refactoring: because I'm allergic to average.",
+        "Rebuilding so clean it squeaks in dark mode.",
+        "Turning “good enough” into “who did this?”",
+        "Optimizing vibes per second (VPS).",
+        "If it looks simple, I suffered correctly.",
+        "Breaking things professionally.",
+        "One more tweak (famous last words).",
+        "Making the UI so smooth it owes me rent.",
+        "You blinked. I rewrote it.",
+        "Still loading… your expectations.",
+        "Refactoring the standard of excellence.",
+        "The glow is temporary. The flex is forever.",
+        "Aesthetic improvements in a mostly legal way.",
+      ];
+
+      function rotateStatusLine() {
+        if (!statusEl) return;
+        let idx = Math.floor(Math.random() * statusLines.length);
+        statusEl.textContent = statusLines[idx];
+
+        if (prefersReducedMotion) return;
+
+        window.setInterval(() => {
+          idx = (idx + 1 + Math.floor(Math.random() * 3)) % statusLines.length;
+          statusEl.textContent = statusLines[idx];
+        }, 3200);
+      }
+
+      rotateStatusLine();
     </script>
   </body>
 </html>
