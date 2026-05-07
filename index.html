@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0d12" />
+
+    <title>Coming Soon</title>
+    <meta
+      name="description"
+      content="Portfolio refresh in progress. Coming soon."
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <main class="page" role="main">
+      <div class="backdrop" aria-hidden="true"></div>
+
+      <section class="card" aria-label="Coming soon">
+        <div class="badge">Portfolio update in progress</div>
+
+        <h1 class="title">Coming soon<span class="ellipsis">…</span></h1>
+        <p class="subtitle">
+          Refactoring the standard of excellence. Refreshing the UI because looking
+          this good shouldn't be this easy. See you in a few days.
+        </p>
+
+        <div class="actions">
+          <a
+            class="btn"
+            href="https://github.com/geek-cheth"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="btnIcon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 .5C5.73.5.75 5.68.75 12.2c0 5.22 3.44 9.64 8.21 11.2.6.12.82-.27.82-.58 0-.29-.01-1.05-.02-2.06-3.34.75-4.05-1.67-4.05-1.67-.54-1.44-1.33-1.82-1.33-1.82-1.09-.78.08-.77.08-.77 1.2.09 1.84 1.29 1.84 1.29 1.07 1.9 2.8 1.35 3.48 1.03.11-.8.41-1.35.75-1.66-2.67-.32-5.48-1.39-5.48-6.2 0-1.37.47-2.49 1.24-3.37-.12-.32-.54-1.62.12-3.38 0 0 1-.33 3.3 1.29.96-.28 1.99-.42 3.02-.43 1.03.01 2.06.15 3.02.43 2.3-1.62 3.3-1.29 3.3-1.29.66 1.76.24 3.06.12 3.38.77.88 1.24 2 1.24 3.37 0 4.82-2.81 5.88-5.49 6.2.42.38.8 1.13.8 2.27 0 1.64-.02 2.96-.02 3.36 0 .32.22.71.83.58 4.77-1.56 8.21-5.98 8.21-11.2C23.25 5.68 18.27.5 12 .5Z"
+                />
+              </svg>
+            </span>
+            <span>GitHub</span>
+          </a>
+        </div>
+
+        <div class="footer">
+          <span class="footerLine"></span>
+          <p class="footerText">© <span id="year"></span> geek-cheth</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = String(
+        new Date().getFullYear(),
+      );
+    </script>
+  </body>
+</html>
